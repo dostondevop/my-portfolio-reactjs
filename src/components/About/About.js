@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { AboutStyled } from './styled';
-import { useHeight, useWidth } from '@ulugbek-dev/windowsize';
+import { useHeight, useWidth } from '../../elements/customDep';
 import AboutSvg from './../AboutSvg/AboutSvg';
 import { Wrapper } from './../../elements/Wrapper';
-import Typed from 'react-typed';
+import { ReactTyped } from "react-typed";
 import { useSelector, useDispatch } from 'react-redux';
 
 export default function About() {
@@ -36,7 +36,7 @@ export default function About() {
                 </div>
                 <div className="content">
                     <p className="hello">Hello <span>!</span></p>
-                    <Typed
+                    <ReactTyped
                         strings={text}
                         typeSpeed={2}
                         backSpeed={30}

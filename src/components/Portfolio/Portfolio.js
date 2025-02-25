@@ -6,12 +6,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
 // Project images
-import Magicline from './../../assets/img/portfolio/Magicline.png';
-import Packiro from './../../assets/img/portfolio/Packiro.png';
-import iProperty from './../../assets/img/portfolio/iProperty.png';
-import LimkokwingNet from './../../assets/img/portfolio/limkokwing-net.png';
-import LimkokwingCom from './../../assets/img/portfolio/limkokwing-com.png';
-import { useHeight } from '@ulugbek-dev/windowsize';
+import { useHeight } from '../../elements/customDep';
 
 export default function Portfolio() {
   const darkMode = useSelector(state => state.darkMode);

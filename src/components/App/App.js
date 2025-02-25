@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from '../Home/Home';
-import { Route, Switch } from 'react-router-dom';
+import { Routes, Route, useLocation } from "react-router-dom";
 import { AppStyled } from './styled';
 import Navbar from '../Navbar/Navbar';
 import About from '../About/About';
@@ -12,40 +12,33 @@ import { useSelector, useDispatch } from 'react-redux';
 import { YMInitializer } from 'react-yandex-metrika';
 
 export default function App() {
-  const darkMode = useSelector(state => state.darkMode) 
+  const darkMode = useSelector(state => state.darkMode);
   const mobileNav = useSelector(state => state.mobileNav);
   const dispatch = useDispatch();
+  const location = useLocation(); // ✅ Fix: Get location from react-router-dom
 
   const handleMobileNavClose = () => {
-    if(mobileNav)
-      dispatch({ type: 'MOBILE_NAV' })
-  }
+    if (mobileNav) dispatch({ type: 'MOBILE_NAV' });
+  };
 
   return (
     <AppStyled darkMode={darkMode} mobileNav={mobileNav} onClick={handleMobileNavClose}>
       <Navbar />
 
-      <YMInitializer accounts={[62372413]} options={{webvisor: true}} />
+      <YMInitializer accounts={[62372413]} options={{ webvisor: true }} />
 
-      <Route
-        render={({ location }) => (
-          <TransitionGroup>
-            <CSSTransition
-              key={location.pathname}
-              classNames="animate"
-              timeout={800}
-            >
-              <Switch location={location}>
-                <Route path="/skills" render={() => <Skills />} />
-                <Route path="/portfolio" render={() => <Portfolio />} />
-                <Route path="/experience-and-education" render={() => <Experience />} />
-                <Route path="/about" render={() => <About />} />
-                <Route path="/" render={() => <Home />} />
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
-        )}
-      />
+      {/* ✅ Fix: Correct way to use Routes & Transitions */}
+      <TransitionGroup>
+        <CSSTransition key={location.pathname} classNames="animate" timeout={800}>
+          <Routes location={location}>
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/experience-and-education" element={<Experience />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </CSSTransition>
+      </TransitionGroup>
     </AppStyled>
   );
 }

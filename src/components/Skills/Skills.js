@@ -3,30 +3,18 @@ import { SkillsStyled } from './styled';
 import SkillsSvg from './../SkillsSvg/SkillsSvg';
 import { Wrapper } from './../../elements/Wrapper';
 import { useSelector } from 'react-redux';
-import { useHeight } from '@ulugbek-dev/windowsize';
+import { useHeight } from '../../elements/customDep';
 import Slider from 'react-slick';
 import { useDispatch } from 'react-redux';
 
 // Skills images
-import adobexd from './../../assets/img/skills/adobexd.png';
 import bootstrap from './../../assets/img/skills/bootstrap.png';
 import css from './../../assets/img/skills/css.png';
-import ee from './../../assets/img/skills/ee.png';
 import git from './../../assets/img/skills/git.png';
 import html from './../../assets/img/skills/html.png';
 import javascript from './../../assets/img/skills/javascript.png';
-import typescript from './../../assets/img/skills/typescript.png';
-import jquery from './../../assets/img/skills/jquery.png';
-import mobX from './../../assets/img/skills/mobx.png';
-import nextjs from './../../assets/img/skills/nextjs.png';
-import photoshop from './../../assets/img/skills/photoshop.png';
 import reactjs from './../../assets/img/skills/reactjs.png';
-import redux from './../../assets/img/skills/redux.png';
 import sass from './../../assets/img/skills/sass.png';
-import styledcomponents from './../../assets/img/skills/styledcomponents.png';
-import storybook from './../../assets/img/skills/storybook.png';
-import graphQL from './../../assets/img/skills/graphQL.png';
-import cypress from './../../assets/img/skills/cypress.png';
 import java from '../../../src/assets/img/skills/java.png'
 import spring_boot from '../../../src/assets/img/skills/spring-boot.png'
 import postgresql from '../../../src/assets/img/skills/postgresql.png'

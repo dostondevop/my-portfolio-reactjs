@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import Nav from './common/Nav';
 import Hamburger from './common/Hamburger';
-import { useWidth } from '@ulugbek-dev/windowsize';
+import { useWidth } from '../../elements/customDep';
 
 export default function Navbar() {
   const darkMode = useSelector(state => state.darkMode);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExperienceStyled } from './styled';
 import { Wrapper } from '../../elements/Wrapper';
-import { useHeight, useWidth } from '@ulugbek-dev/windowsize';
+import { useHeight, useWidth } from '../../elements/customDep';
 import { useSelector, useDispatch } from 'react-redux';
 
 export default function Experience() {
@@ -11,6 +11,18 @@ export default function Experience() {
     const dispatch = useDispatch();
 
     const experienceAndEduction = [
+        {
+            position: "Assistant Team Manager",
+            duration: "March 2023 - Jan 2024",
+            location: "Tashkent, Uzbekistan",
+            company: "bi1 Supermarkets Chain"
+        },
+        {
+            position: "Software Developer",
+            duration: "May 2022 - Jan 2023",
+            location: "Tashkent, Uzbekistan",
+            company: "Company Stable POS"
+        },
         {
             position: "Bachelor's degree in Economics",
             duration: "Sep 2021 - May 2025",

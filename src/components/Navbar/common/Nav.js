@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { NavStyled } from './NavStyled';
 import { useSelector, useDispatch } from 'react-redux';
-import { useWidth } from '@ulugbek-dev/windowsize';
+import { useWidth } from '../../../elements/customDep';
 import Socials from '../../Socials/Socials';
 import NavLinkWithSound from '../../NavLinkWithSound/NavLinkWithSound';
 

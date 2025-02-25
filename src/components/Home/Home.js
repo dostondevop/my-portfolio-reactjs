@@ -1,7 +1,7 @@
 import React from 'react';
 import { HomeStyled } from './styled';
 import Name from '../Name/Name';
-import { useHeight } from '@ulugbek-dev/windowsize';
+import { useHeight } from '../../elements/customDep';
 import { useSelector } from 'react-redux';
 import NavLinkWithSound from '../NavLinkWithSound/NavLinkWithSound';
 
